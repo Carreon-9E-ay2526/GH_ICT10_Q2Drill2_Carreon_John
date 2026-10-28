@@ -1,0 +1,238 @@
+
+    <title>Rainbow Catering Club</title>
+
+    <link rel="stylesheet"
+    href="https://pyscript.net/releases/2026.7.3/core.css">
+
+    <script type="module"
+    src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Baloo+2:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            background: #c8e9ec;
+            font-family: 'Baloo 2', sans-serif;
+            color: #293d59;
+        }
+
+        .poster {
+            position: relative;
+            overflow: hidden;
+            max-width: 650px;
+            min-height: 850px;
+            margin: auto;
+            padding: 30px;
+            background: #c8e9ec;
+        }
+
+        .school {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .school span {
+            display: block;
+            font-size: 15px;
+        }
+
+        .decoration {
+            position: absolute;
+            font-size: 55px;
+        }
+
+        .butterfly {
+            top: 15px;
+            left: 15px;
+        }
+
+        .honey {
+            top: 20px;
+            right: 15px;
+        }
+
+        .paper {
+            position: relative;
+            margin-top: 45px;
+            padding: 45px 25px;
+            min-height: 700px;
+            text-align: center;
+            background: #fffefa;
+            border-radius: 45% 45% 25px 25px / 8% 8% 25px 25px;
+        }
+
+        h1 {
+            margin: 15px 0 20px;
+            color: #d74767;
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(42px, 9vw, 68px);
+            font-weight: 700;
+            line-height: 0.95;
+        }
+
+        .tagline {
+            margin-bottom: 25px;
+            color: #5999e8;
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .divider {
+            margin: 25px 0;
+            border-top: 4px dotted #293d59;
+        }
+
+        h2 {
+            color: #df5c6e;
+            font-size: 26px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            margin: 12px auto;
+            padding: 13px;
+            border: 2px solid #c8e9ec;
+            border-radius: 15px;
+            outline: none;
+            font-family: inherit;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #5999e8;
+        }
+
+        button {
+            margin: 10px;
+            padding: 12px 35px;
+            border: none;
+            border-radius: 25px;
+            background: #df5c7a;
+            color: white;
+            font-family: inherit;
+            font-size: 18px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c94463;
+        }
+
+        .members-box {
+            margin-top: 25px;
+            padding: 18px;
+            border-radius: 18px;
+            background: #eef8f8;
+            text-align: left;
+            overflow-wrap: anywhere;
+        }
+
+        #output {
+            line-height: 1.8;
+        }
+
+        .cooking {
+            margin-top: 25px;
+            font-size: 38px;
+            letter-spacing: 5px;
+        }
+
+        @media (max-width: 450px) {
+            .poster {
+                padding: 15px;
+            }
+
+            .paper {
+                padding: 40px 15px;
+            }
+
+            .school {
+                font-size: 16px;
+            }
+
+            .school span {
+                font-size: 13px;
+            }
+
+            .decoration {
+                font-size: 38px;
+            }
+
+            .tagline {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="poster">
+
+        <div class="school">
+            OB MONTESSORI CENTER
+            <span>Junior High School Department</span>
+        </div>
+
+        <div class="decoration butterfly">🦋</div>
+        <div class="decoration honey">🍯</div>
+
+        <main class="paper">
+
+            <h1>
+                RAINBOW<br>
+                CATERING<br>
+                CLUB
+            </h1>
+
+            <p class="tagline">
+                Creativity, Food, and Service!
+            </p>
+
+            <div class="divider"></div>
+
+            <h2>Add a New Member</h2>
+
+            <input type="text"
+                   id="firstname"
+                   placeholder="Enter first name">
+
+            <input type="text"
+                   id="lastname"
+                   placeholder="Enter last name">
+
+            <button type="button" py-click="submit">
+                Submit
+            </button>
+
+            <div class="divider"></div>
+
+            <h2>Club Members</h2>
+
+            <div class="members-box">
+                <div id="output">
+                    Enter a name to add a member!
+                </div>
+            </div>
+
+            <div class="cooking">
+                👩‍🍳 🧁 🍓
+            </div>
+
+        </main>
+    </div>
+
+    <script type="py" src="./main.py"></script>
+</body>
+</html>
